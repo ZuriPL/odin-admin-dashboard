@@ -1,0 +1,258 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+body {
+    max-height: 100vh;
+    width: 100vw;
+    overflow: overlay;
+}
+
+.wrapper {
+    display: grid;
+    grid-template: 13rem 1fr / 22.5rem 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #1b9ee4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 1.5rem;
+    grid-row: 1 / span 2;
+    justify-content: flex-start;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.25em;
+}
+
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1.25rem;
+}
+
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: calc(2rem + 6px);
+    padding-left: 6px;
+}
+
+a > p {
+    font-size: 1.5em;
+}
+
+
+.nav {
+    background-color: white;
+    box-shadow: 0px 3px 8px 0px hsl(0 0% 25% / 0.2);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+}
+
+.nav-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+#searchbar {
+    border-radius: 100vh;
+    border: none;
+    background-color: #e2e8f0;
+    width: 90%;
+    padding-left: 1.5rem;
+}
+#searchbar::placeholder {
+    color: #aaa;
+}
+
+.current-user-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    display: flex;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    margin-right: auto;
+    font-weight: 700;
+}
+
+.greeting img {
+    grid-row: 1 / span 2;
+}
+
+.greeting-text {
+    margin-left: 1.25rem;
+    place-self: flex-end flex-start ;
+}
+
+.greeting-person {
+    margin-left: 1.25rem;
+    font-size: 1.75rem;
+    place-self: center flex-start ;
+}
+
+.btn {
+    width: 12ch;
+    padding: 0.75rem 0rem;
+    border-radius: 100vw;
+    border: none;
+    background-color: #1b9ee4;
+    color: white;
+    font-size: 1.25em;
+}
+
+.btn:hover {
+    background-color: hsl(201, 79%, 45%);
+    cursor: pointer;
+}
+
+.main {
+    background-color: #e2e2e2;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 20rem;
+    grid-template-rows: repeat(2, 1fr);
+    overflow-y: auto;
+}
+
+.main h3 {
+    font-size: 1.5em;
+}
+
+.projects {
+    grid-row: 1 / span 2;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e2e2e2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 100vh;
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.card-wrapper {
+    overflow: auto;
+    width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+}
+
+
+.card {
+    height: 200px;
+    display: grid;
+    background-color: white;
+    border-left: #f0b429 8px solid;
+    border-radius: 8px;
+    padding: 1.5rem;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.announcements-wrapper, 
+.trending-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+            
+.announcements-wrapper hr {
+    margin: 1rem 0rem;
+    background-color: #999;
+    height: 1px;
+    border: none;
+}
+
+.announcements-wrapper h4 {
+    font-size: 1.25em;
+    margin-bottom: 0.5rem;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.trending-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.trending-unit {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.trending img {
+    width: 64px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    grid-row: 1 / span 2
+}
+
+.trending p {
+    align-self: flex-end;
+    font-weight: 700;
+    color: black;
+    font-size: 1.125em;
+}
+
+.trending p:last-of-type {
+    font-size: 1em;
+    align-self: flex-start;
+    font-weight: 700;
+    color: gray;
+}
